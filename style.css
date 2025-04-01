@@ -1,9 +1,117 @@
-/*Estilo Geral*/
+/*ESTILO GERAL*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+
+    .poppins-thin {
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    .poppins-extralight {
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+    }
+
+    .poppins-light {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .poppins-medium {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .poppins-semibold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    .poppins-bold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .poppins-extrabold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+    }
+
+    .poppins-black {
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+    }
+
+    .poppins-thin-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        font-style: italic;
+    }
+
+    .poppins-extralight-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: italic;
+    }
+
+    .poppins-light-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    .poppins-regular-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    .poppins-medium-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    .poppins-semibold-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: italic;
+    }
+
+    .poppins-bold-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .poppins-extrabold-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: italic;
+    }
+
+    .poppins-black-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: italic;
+    }
+
 }
 
 body {
@@ -23,8 +131,8 @@ body {
 .btn-contato button {
     padding: 10px 40px;
     font-size: 18px;
-    font-weight: 500;
-    background-color: rgb(21, 235, 103);
+    font-weight: 600;
+    background-color: #00ff08;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
@@ -35,23 +143,22 @@ h2.titulo {
     color: white;
     font-size: 38px;
     text-align: center;
-    text-decoration: none;
 }
 
 h2.titulo span {
-    color: rgb(9, 245, 99);
+    color: #00ff08;
 }
 
 button:hover,
 form .btn-enviar input:hover {
-    box-shadow: 0px 0px 10px rgb(4, 255, 100);
+    box-shadow: 0 0 8px #03fa0b;
     transform: scale(1.1);
 }
 
-/*Estilo do cabeçalho*/
+/*ESTILO DO CABEÇALHO*/
+
 header {
     padding: 40px 4%;
-
 }
 
 header>.interface {
@@ -61,54 +168,123 @@ header>.interface {
 }
 
 header a {
-    color: rgb(119, 118, 118);
+    color: rgb(80, 79, 79);
+    /* cor da fonte do cabeçalho*/
     text-decoration: none;
+    /* tirar o sublinhado do link*/
     display: inline-block;
     transition: .2s;
 }
 
-header a:hover {
-    color: rgb(253, 253, 253);
+header nav.menu-desktop a:hover {
+    color: #ffff;
     transform: scale(1.1);
-
 }
 
 header nav ul {
-    list-style-type: none;
+    list-style: none;
+    /* tirar a bolinha da frente*/
 }
 
-header nav ul li {
+header nav.menu-desktop ul li {
     display: inline-block;
+    /* deixar os itens um ao lado do outro*/
     padding: 0 40px;
+    /* espacamento entre os itens*/
 }
 
-/*Estilo do topo do site*/
-selection.topo-do-site {
+/*ESTILO DO MENU MOBILE*/
+
+.btn-abrir-menu i{
+    color: #00ff08;
+    font-size: 40px;
+}
+
+.menu-mobile{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #ffff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: green;
+    color: rgb(0, 0, 0);
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px  5%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #00ff08;
+    font-size: 30px;
+}
+
+.overlay-menu{
+    background-color: #000000af;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/*ESTILO DO TOPO DO SITE*/
+section.topo-do-site {
     padding: 40px 4%;
 }
 
-selection.topo-do-site.flex {
+section.topo-do-site .flex {
     align-items: center;
     justify-content: center;
-    gap: 200px;
+    gap: 90px
 }
 
 .topo-do-site h1 {
-    color: rgb(247, 247, 247);
-    font-size: 38px;
+    color: #ffff;
+    font-size: 35px;
+    line-height: 40px;
 }
 
-.topo-do-site .txt-do-site h1 span {
-    color: rgb(9, 245, 99);
-    font-size: 60px;
+.topo-do-site .txt-topo-site h1 span {
+    color: #01ff09;
+    font-size: 42px;
 }
 
-.topo-do-site .txt-do-site p {
-    color: rgb(246, 248, 250);
-    margin: 50px 0;
+.topo-do-site .txt-topo-site p {
+    color: #ffff;
+    margin: 40px 0;
 }
 
-.topo-do-site.img-topo-site img {
+.topo-do-site .img-topo-site img {
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
 }
@@ -119,101 +295,96 @@ selection.topo-do-site.flex {
     }
 
     100% {
-        top: 100px;
+        top: 30px;
     }
 }
 
-/*Estilo das especialidades*/
-selection.especialidades {
+/*ESTILO DAS ESPECIALIDADES*/
+
+section.especialidades {
     padding: 40px 4%;
 }
 
-selection.especialidades .flex {
+section.especialidades .flex {
     gap: 60px;
 }
 
 .especialidades .especialidades-box {
-    color: rgb(255, 255, 255);
+    color: white;
     padding: 40px;
     border-radius: 20px;
-    margin-top: 40px;
-    transition: 0.5s;
-}
-
-.especialidades .especialidades-box:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 20px rgb(100, 100, 100);
+    margin-top: 45px;
+    transition: .2s;
 }
 
 .especialidades .especialidades-box i {
     font-size: 70px;
-    color: rgb(9, 245, 99);
+    color: #00ff08;
 }
 
 .especialidades .especialidades-box h3 {
-    font-size: 30px;
-    margin: 20px 0;
-
+    font-size: 28px;
+    margin: 15px 0;
 }
 
-/*Estilo do Sobre*/
-selection.sobre {
+.especialidades .especialidades-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0 20px #ffffff73;
+}
+
+/*ESTILO DO SOBRE*/
+
+section.sobre {
     padding: 80px 4%;
 }
 
-selection.sobre .flex {
+section.sobre .flex {
     align-items: center;
     gap: 60px;
 }
 
-selection.txt-sobre {
+.sobre .txt-sobre {
     color: white;
-    text-decoration: none;
 }
 
 .sobre .txt-sobre h2 {
     font-size: 40px;
-    color: rgb(255, 255, 255);
-    line-height: 60px;
+    margin-bottom: 20px;
+    line-height: 40px;
     margin-bottom: 30px;
-    text-decoration: none;
-
 }
 
 .sobre .txt-sobre h2 span {
-    color: rgb(7, 253, 89);
+    color: #00ff08;
     display: block;
-    font-size: 40px;
 }
 
 .sobre .txt-sobre p {
     margin: 20px 0;
-    color: rgb(255, 255, 255);
     text-align: justify;
 }
 
 .btn-social button {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
     border: none;
-    background-color: rgb(9, 245, 99);
+    background-color: #00ff08;
     font-size: 22px;
     cursor: pointer;
-    margin: 0 0 10px;
+    margin: 0 5px;
     transition: .2s;
 }
 
-.btn-social a {
-    text-decoration: none;
-    color: white;
+.sobre .txt-sobre .btn-social button {
+    margin-top: 150px;
 }
 
-/*Estilo dos Portifolio*/
+/*ESTILO DO PORTIFOLIO*/
 
 section.portifolio {
     padding: 80px 4%;
-    box-shadow: 0px 0px 40px 10px rgb(43, 42, 42);
+    box-shadow: 0 0 40px 10px #ffffff2c;
 }
 
 section.portifolio .flex {
@@ -242,14 +413,14 @@ section.portifolio .flex {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000b8;
+    background-color: #000000c7;
     border-radius: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     font-weight: 600;
-    color: #fff;
+    color: #ffff;
     opacity: 0;
     transition: .5s;
 }
@@ -258,7 +429,7 @@ section.portifolio .flex {
     opacity: 1;
 }
 
-/*Estilo do Formulario*/
+/*Estilo do Formulario de contato*/
 
 section.formulario {
     padding: 80px 4%;
@@ -298,7 +469,7 @@ form .btn-enviar {
 
 form .btn-enviar input {
     width: 120px;
-    background-color: rgb(9, 245, 99);
+    background-color: #00ff08;
     color: black;
     font-weight: 700;
     cursor: pointer;
@@ -309,10 +480,10 @@ form .btn-enviar input {
 
 footer {
     padding: 40px 4%;
-    box-shadow: 0px 0px 40px 10px rgb(43, 42, 42);
+    box-shadow: 0 0 40px 10px #ffffff2c;
 }
 
-footer.flex {
+footer .flex {
     justify-content: space-between;
 }
 
@@ -321,25 +492,32 @@ footer .line-footer {
 }
 
 .borda {
-    border-top: 2px solid rgb(9, 245, 99);
+    border-top: 2px solid #00ff08;
 }
 
 footer .line-footer p i {
-    color: #30f309;
-    margin: 20px 0;
+    color: #32f30b;
     font-size: 22px;
 }
 
 footer .line-footer p a {
-    color: #fff;
-    text-decoration: none;
+    color: white;
 }
 
 @media screen and (max-width: 1020px) {
 
-    /*classes gerais*/
+    /*Classe geral*/
     .flex {
         flex-direction: column;
+    }
+
+    .topo-do-site .flex {
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo {
+        font-size: 30px;
+        line-height: 34px;
     }
 
     /*cabeçalho*/
@@ -348,8 +526,12 @@ footer .line-footer p a {
         display: none;
     }
 
-    /* Topo do site*/
-    selection.topo-do-site {
+    /*top do site*/
+    section.topo-do-site .flex {
+        gap: 40px
+    }
+
+    section.topo-do-site {
         padding: 20px 8%;
     }
 
@@ -361,8 +543,60 @@ footer .line-footer p a {
         width: 100%;
     }
 
-    /*Estilo das especialidades*/
-    selection.especialidades {
-        padding: 30px 8%;
+    /*ESTILO DAS ESPECIALIDADES*/
+
+    section.especialidades {
+        padding: 40px 8%;
     }
+
+    /*ESTILO DO SOBRE*/
+
+    section.sobre {
+        padding: 80px 8%;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-social {
+        text-align: center;
+    }
+
+    .img-sobre img {
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    /*ESTILO DO PORTIFOLIO*/
+
+    section.portifolio {
+        padding: 80px 8%;
+
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    section.portifolio .flex {
+        gap: 40px;
+    }
+
+    /*Estilo do footer*/
+
+    footer .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer .line-footer {
+        text-align: center;
+    }
+
+
 }
