@@ -28,14 +28,14 @@
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Especialidades</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#início">Início</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#portifolio">Projetos</a></li>
                 </ul>
             </nav>
             <div class="btn-contato">
-                <a href="#">
+                <a href="#contato">
                     <button>Contato</button>
                 </a>
             </div><!--btn-contato-->
@@ -51,11 +51,11 @@
 
                 <nav>
                     <ul>
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Especialidades</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Projetos</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="#topo-do-site">Início</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#portifolio">Projetos</a></li>
+                        <li><a href="#contato">Contato</a></li>
                     </ul>
                 </nav>
 
@@ -66,14 +66,14 @@
         </div><!--interface-->
     </header>
     <main>
-        <section class="topo-do-site">
+        <section class="topo-do-site" id="topo-do-site">
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
                         <h1>TRANSFORMANDO IDEIAS EM ARTE ATRAVÉS DA <span>TECNOLOGIA</span></h1>
                         <p>Transformar ideias em arte através da tecnologia é dar asas à imaginação em um mundo sem limites. Cada linha de código, cada algoritmo, cada ferramenta digital é um novo pincel na mão de sonhadores que ousam criar o invisível. </p>
                         <div class="btn-contato">
-                            <a href="#">
+                            <a href="#contato">
                                 <button>Entre em contato</button>
                             </a>
                         </div>
@@ -85,7 +85,7 @@
             </div><!--interface-->
         </section><!--topo-do-site-->
 
-        <section class="especialidades">
+        <section class="especialidades" id="especialidades">
             <div class="interface">
                 <h2 class="titulo">MINHAS <span>ESPECIALIDADES</span></h2>
                 <div class="flex">
@@ -108,7 +108,7 @@
             </div><!--interface-->
         </section><!--especialidades-->
 
-        <section class="sobre">
+        <section class="sobre" id="sobre">
             <div class="interface">
                 <div class="flex">
                     <div class="img-sobre">
@@ -132,32 +132,32 @@
             </div><!--interface-->
         </section><!--sobre-->
 
-        <section class="portifolio">
+        <section class="portifolio" id="portifolio">
             <div class="interface">
                 <h2 class="titulo">MEU <span>PORTIFÓLIO.</span></h2>
                 <div class="flex">
-                    <div class="img-port" style="background-image: url(Imagens/imagem.jpg);">
-                        <div class="overlay">Projeto 1</div>
+                    <div class="img-port" style="background-image: url(Imagens/Design\(1\).png);">
+                        <div class="overlay">site</div>
                     </div>	
-                    <div class="img-port" style="background-image: url(Imagens/layout-do-projeto.jpg);">
-                        <div class="overlay">Projeto 2</div>
+                    <div class="img-port" style="background-image: url(Imagens/Design\ \ \(2\).png);">
+                        <div class="overlay">jogo do Mario</div>
                     </div>	
-                    <div class="img-port" style="background-image: url(Imagens/imagem.jpg);">
-                        <div class="overlay">Projeto 3</div>
+                    <div class="img-port" style="background-image: url(Imagens/Design\ sem\ nome.png);">
+                        <div class="overlay">Gerador de senhas</div>
                     </div>	
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--Portifolio-->
 
-        <section class="formulario">
+        <section class="formulario" id="formulario">
 				<div class="interface">
 					<h2 class="titulo">FALA <span>COMIGO</span></h2>
 
-					<form method="">
-						<input type="text" name="" id="" placeholder="Seu nome completo:" required>
-						<input type="text" name="" id="" placeholder="Seu e-mail:" required>
-						<input type="text" name="" id="" placeholder="Seu celular:(xxx) xxxxx-xxxx">
-						<textarea name="" id="" placeholder="Sua mensagem:" required></textarea>
+					<form method="post" action="enviar.php">
+						<input type="text" name="nome" id="" placeholder="Seu nome completo:" required>
+						<input type="text" name="e-mail" id="" placeholder="Seu e-mail:" required>
+						<input type="text" name="celular" id="" placeholder="Seu celular:(xxx) xxxxx-xxxx">
+						<textarea name="mensagem" id="" placeholder="Sua mensagem:" required></textarea>
 						<div class="btn-enviar"><input type="submit" value="Enviar"></div>
 					</form>
 				</div><!--interface-->
@@ -165,7 +165,7 @@
     </main>
 
     <footer>
-        <div class="interface">
+        <div class="interface" id="contato">
             <div class="line-footer">
                 <div class="flex">
                         <div class="logo-footer">
